@@ -1,6 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import PlaceCard from '../components/PlaceCard';
+import PlaceForm from '../components/PlaceForm';
+import MapApp from '../components/MapApp';
 
 const Mainpage = () => {
   const [places, setPlaces] = useState(null);
@@ -20,6 +22,10 @@ const Mainpage = () => {
   console.log(places);
   return (
     <div className='main-page'>
+      <section className='form-section'>
+        <PlaceForm />
+      </section>
+      <MapApp />
       <div className='places'>
         {console.log(places)}
         {places &&

@@ -1,0 +1,85 @@
+/* ====== Fonts ====== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Oswald:wght@600&family=Roboto+Mono:wght@300;500;700&display=swap');
+
+/* ====== Variables ====== */
+
+:root {
+  --blue: #4ab0d9;
+  --green: #5b794c;
+  --yellow: #f2ba52;
+  --darkblue: #315669;
+  --red: #b7321a;
+  --blackish: #272627;
+}
+
+/* ====== Global Settings ====== */
+
+* {
+  margin: 0;
+}
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--blue);
+}
+
+/* ====== Nav Bar Styles ====== */
+
+.container {
+  background-color: var(--blue);
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+}
+
+.container a {
+  text-decoration: none;
+  color: var(--yellow);
+  text-shadow: 5px 5px 5px var(--darkblue);
+  padding: 20px;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+}
+
+.place-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.place-form h2 {
+  color: var(--blackish);
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.city-country {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.place-form label {
+  padding-right: 5px;
+}
+.notes-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.map-app {
+  font-weight: 400;
+  text-align: right;
+  padding: 100px;
+  margin-bottom: 60px;
+}
+
+.map-view {
+  height: 80vh;
+}

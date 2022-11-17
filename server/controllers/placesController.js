@@ -19,7 +19,31 @@ const createPlace = async (req, res) => {
   }
 };
 
+// delete a place
+const deletePlace = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const place = await Place.findOneAndDelete({ _id: id });
+    res.status(200).json(place);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+// update a place
+const updatePlace = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const place = await Place.findOneAndUpdate({ _id: id }, { ...req.body });
+    res.status(200).json(place);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
 module.exports = {
   getPlaces,
   createPlace,
+  deletePlace,
+  updatePlace,
 };

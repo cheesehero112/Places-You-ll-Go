@@ -11,7 +11,10 @@ const placeSchema = new Schema(
       type: String,
       required: true,
     },
-    geoLocation: [{ 'lat': Number, 'long': Number }],
+    location: {
+      type: { type: String, default: 'Point' },
+      coordinates: { type: [Number], default: [0, 0] },
+    },
     notes: {
       type: String,
     },

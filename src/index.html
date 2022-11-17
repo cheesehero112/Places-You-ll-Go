@@ -10,9 +10,28 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <!-- <script src="https://js.arcgis.com/4.25/"></script>
+    <script>
+      require(['esri/config', 'esri/Map', 'esri/views/MapView', 'esri/widgets/Search'], function (esriConfig, Map, MapView) {
+        esriConfig.apiKey = 'AAPK2c087755e01542cfa2c269161346ee0fsdCkHnJ6J8gIm_QfzgayQlOjJVVFGjNkS-s3uKhUnlff-m89pLO2cPSpHtHwXr1O';
+
+        const map = new Map({
+          basemap: 'arcgis-light-gray', // Basemap layer service
+        });
+
+        const view = new MapView({
+          map: map,
+          center: [-118.805, 34.027], // Longitude, latitude
+          zoom: 13, // Zoom level
+          container: 'viewDiv', // Div element
+        });
+      });
+    </script> -->
+
     <title>Places You'll Go!</title>
   </head>
   <body>
     <div id="root"></div>
+    <div id="viewDiv"></div>
   </body>
 </html>
