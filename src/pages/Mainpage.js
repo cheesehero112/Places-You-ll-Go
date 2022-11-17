@@ -29,7 +29,6 @@ const Mainpage = () => {
       <section className='form-section'>
         <PlaceForm />
       </section>
-      <MapApp />
       <div className='places'>
         {places &&
           places.map((place) => (
@@ -39,6 +38,7 @@ const Mainpage = () => {
             />
           ))}
       </div>
+      <MapApp />
     </div>
   );
 };

@@ -48,6 +48,7 @@ body {
 .form-section {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .place-form {
@@ -58,7 +59,7 @@ body {
 
 .where-to-go h2 {
   color: var(--blackish);
-  text-shadow: 5px 2px 5px var(--yellow);
+  text-shadow: 5px 2px 5px floralwhite;
   font-size: 28px;
   padding: 20px;
 }
@@ -130,15 +131,21 @@ div.error {
   border-radius: 4px;
 }
 
-input {
-}
-
 /* ====== Map Styles ====== */
 .map-app {
   font-weight: 400;
   text-align: right;
   padding: 100px;
   margin-bottom: 60px;
+}
+
+.map-app h2 {
+  color: var(--blackish);
+  text-shadow: 5px 2px 5px floralwhite;
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .map-view {

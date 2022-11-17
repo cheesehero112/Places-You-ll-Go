@@ -94,7 +94,7 @@ const PlaceForm = () => {
           value={notes}
         />
       </section>
-      <button className='add-place-btn'>Add New Place!</button>
+      <button className='add-place-btn'>Add a New Place!</button>
       {error && <div className='error'>{error}</div>}
     </form>
   );
