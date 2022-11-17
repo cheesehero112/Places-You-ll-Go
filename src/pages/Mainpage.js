@@ -3,23 +3,27 @@ import { useEffect, useState } from 'react';
 import PlaceCard from '../components/PlaceCard';
 import PlaceForm from '../components/PlaceForm';
 import MapApp from '../components/MapApp';
+import { usePlacesContext } from '../hooks/usePlacesContext';
 
 const Mainpage = () => {
-  const [places, setPlaces] = useState(null);
+  const { places, dispatch } = usePlacesContext();
 
   useEffect(() => {
     const fetchPlaces = async () => {
       // the URL has to be the full http://localhost3000/api/places
       const response = await fetch('/api/places');
       const json = await response.json();
-      console.log(json);
+
       if (response.ok) {
-        setPlaces(json);
+        dispatch({
+          type: 'SET_PLACES',
+          payload: json,
+        });
       }
     };
     fetchPlaces();
   }, []);
-  console.log(places);
+
   return (
     <div className='main-page'>
       <section className='form-section'>
@@ -27,7 +31,6 @@ const Mainpage = () => {
       </section>
       <MapApp />
       <div className='places'>
-        {console.log(places)}
         {places &&
           places.map((place) => (
             <PlaceCard

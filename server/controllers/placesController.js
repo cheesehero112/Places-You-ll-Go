@@ -10,6 +10,16 @@ const getPlaces = async (req, res) => {
 // create a new place
 const createPlace = async (req, res) => {
   const { city, country, geoLocation, notes } = req.body;
+  let errorField = [];
+  if (!city) {
+    errorField.push('city');
+  }
+  if (!country) {
+    errorField.push('country');
+  }
+  if (errorField.length > 0) {
+    return res.status(400).json({ error: 'Please fill in both required fields', errorField });
+  }
   // add data to db
   try {
     const place = await Place.create({ city, country, geoLocation, notes });

@@ -23,6 +23,10 @@ body {
   background-color: var(--blue);
 }
 
+.main-page {
+  margin-bottom: 100px;
+}
+
 /* ====== Nav Bar Styles ====== */
 
 .container {
@@ -72,7 +76,23 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+/* ====== Input Field Styles ====== */
 
+input.error {
+  border: 1px solid var(--red);
+}
+
+div.error {
+  border: 1px solid var(--red);
+  color: var(--red);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+input {
+}
+
+/* ====== Map Styles ====== */
 .map-app {
   font-weight: 400;
   text-align: right;
@@ -82,4 +102,59 @@ body {
 
 .map-view {
   height: 80vh;
+}
+
+/* ====== Places Card Styles ====== */
+
+.places {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.place-card {
+  background-color: floralwhite;
+  width: 280px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 10px;
+}
+
+.place-title {
+  background-color: var(--green);
+  color: floralwhite;
+  display: flex;
+  flex-direction: column;
+  align-self: auto;
+  padding: 20px 10px;
+}
+
+.place-note {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex-grow: 1;
+  background-color: #f2ba52;
+  padding: 10px 20px;
+}
+
+.place-timestamp {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+  padding: 5px 3px;
+}
+
+.place-buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0px 5px;
+}
+
+.place-buttons button {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  padding: 5px;
 }

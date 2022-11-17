@@ -1,5 +1,7 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const dotenv = require('dotenv');
 
 module.exports = {
   entry: './src/index.js',
@@ -53,4 +55,17 @@ module.exports = {
       '/api': 'http://localhost:3000',
     },
   },
+  resolve: {
+    fallback: { 'os': false },
+  },
 };
+
+// module.exports = () => {
+//   const env = dotenv.config().parsed;
+
+//   return {
+//     plugins: [
+//     new webpack.DefinePlugin({ `process.env.GEO_URL`: JSON.stringify(${env.GEO_URL})}),
+//     ]
+//   }
+// }

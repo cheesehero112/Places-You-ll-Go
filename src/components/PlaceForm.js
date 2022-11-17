@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { loadModules } from 'esri-loader';
+import { usePlacesContext } from '../hooks/usePlacesContext';
 
 const PlaceForm = () => {
+  const { dispatch } = usePlacesContext();
   const [city, setCity] = useState('');
   const [country, setCountry] = useState('');
   const [notes, setNotes] = useState('');
   const [error, setError] = useState('');
+  // const [errorField, setErrorField] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,19 +23,42 @@ const PlaceForm = () => {
           'Content-Type': 'application/json',
         },
       });
+      // // load modules
+      // const modules = ['esri/Map', 'esri/views/MapView', 'esri/Graphic'];
+      // // async load modules
+      // const [Map, MapView, Graphic] = await loadModules(modules);
+      // const geoURL = 'https://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer';
+      // const params = {
+      //   address: {
+      //     'address': `${city}, ${country}`,
+      //   },
+      // };
+      // locator.addressToLocations(geoURL, params).then((results) => {
+      //   console.log(results[0]);
+      // });
       const json = await response.json();
+
       if (!response.ok) {
         setError(json.error);
+        // setErrorField(json.errorField);
+        // console.log('error field: ', json.errorField);
       }
+
       if (response.ok) {
         setCity('');
         setCountry('');
         setNotes('');
-        setGeoLocation([0, 0]);
         setError(null);
+        // setErrorField([]);
         console.log('new place added!', json);
+        dispatch({
+          type: 'CREATE_PLACE',
+          payload: json,
+        });
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -67,7 +94,7 @@ const PlaceForm = () => {
           value={notes}
         />
       </section>
-      <button>Add New Place!</button>
+      <button className='add-place-btn'>Add New Place!</button>
       {error && <div className='error'>{error}</div>}
     </form>
   );

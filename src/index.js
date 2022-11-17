@@ -2,7 +2,14 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './components/App';
 import './index.css';
+import { PlacesContextProvider } from './context/PlacesContext';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-root.render(<App />);
+root.render(
+  <React.StrictMode>
+    <PlacesContextProvider>
+      <App />
+    </PlacesContextProvider>
+  </React.StrictMode>
+);
