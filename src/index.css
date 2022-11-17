@@ -43,6 +43,8 @@ body {
   padding: 20px;
 }
 
+/* ====== 'Where Do you Want to go' Styles ====== */
+
 .form-section {
   display: flex;
   justify-content: center;
@@ -54,12 +56,22 @@ body {
   justify-content: center;
 }
 
-.place-form h2 {
+.where-to-go h2 {
   color: var(--blackish);
+  text-shadow: 5px 2px 5px var(--yellow);
   font-size: 28px;
-  display: flex;
-  justify-content: center;
   padding: 20px;
+}
+
+.place-form label {
+  font-size: 20px;
+  padding-right: 5px;
+  margin-bottom: 5px;
+}
+
+.place-form input {
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 5px;
 }
 
 .city-country {
@@ -67,14 +79,43 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-
-.place-form label {
-  padding-right: 5px;
+.city-country input {
+  border: 2px solid var(--blackish);
+  border-radius: 4px;
+  height: 30px;
+  font-size: 20px;
 }
+
 .notes-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.notes-form textarea {
+  border: 2px solid var(--blackish);
+  border-radius: 4px;
+  font-family: 'Roboto Mono', monospace;
+  height: 60px;
+  font-size: 20px;
+}
+
+.add-place-btn {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 22px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+.add-place-btn:hover {
+  background-color: var(--yellow);
+}
+
+.add-place-btn:active {
+  background-color: var(--yellow);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 /* ====== Input Field Styles ====== */
 
@@ -137,7 +178,7 @@ input {
   gap: 5px;
   flex-grow: 1;
   background-color: #f2ba52;
-  padding: 10px 20px;
+  padding: 10px;
 }
 
 .place-timestamp {
