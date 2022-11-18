@@ -13,6 +13,7 @@ const Mainpage = () => {
       // the URL has to be the full http://localhost3000/api/places
       const response = await fetch('/api/places');
       const json = await response.json();
+      // console.log('json from fetch: ', json);
 
       if (response.ok) {
         dispatch({
@@ -23,6 +24,8 @@ const Mainpage = () => {
     };
     fetchPlaces();
   }, []);
+
+  // console.log('json from fetch: ', json);
 
   return (
     <div className='main-page'>
