@@ -81,8 +81,8 @@ body {
   justify-content: center;
 }
 .city-country input {
-  border: 2px solid var(--blackish);
-  border-radius: 4px;
+  border: 2px solid rgba(125, 123, 123, 0.8);
+  border-radius: 6px;
   height: 30px;
   font-size: 20px;
 }
@@ -94,20 +94,21 @@ body {
 }
 
 .notes-form textarea {
-  border: 2px solid var(--blackish);
-  border-radius: 4px;
+  border: 2px solid rgba(83, 82, 82, 0.9);
+  border-radius: 6px;
   font-family: 'Roboto Mono', monospace;
   height: 60px;
   font-size: 20px;
 }
 
 .add-place-btn {
+  border: 3px solid rgba(8, 101, 5, 0.8);
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
   font-size: 22px;
   padding: 10px;
-  margin-top: 10px;
-  border-radius: 4px;
+  margin-top: 20px;
+  border-radius: 6px;
 }
 .add-place-btn:hover {
   background-color: var(--yellow);
@@ -162,6 +163,8 @@ div.error {
 }
 .place-card {
   background-color: floralwhite;
+  border-radius: 7px;
+  box-shadow: 5px 5px rgba(85, 84, 84, 0.5);
   width: 280px;
   height: 200px;
   display: flex;
