@@ -6,12 +6,13 @@ Places You'll Go is a Web application that allows users to create a wishlist for
 User can also visualize all the places in a map.
 
 This app is created by using:
-Webpack
-React
-Node.js
-Express.js
-mongoose
-MongoDB
+
+- JavaScript
+- Webpack
+- React
+- Node.js/ Express.js
+- MongoDB / mongoose
+- ArcGIS API for JavaScript
 
 This is a work in progress application.
 
@@ -26,7 +27,13 @@ This is a work in progress application.
 - When cards are added or deleted, it will automatically reflect the changes
 - User can view all the places on a map
 
-![places-screencapture](/Users/chihiroshibayama/git/Places-You'll-Go/Places-You'll-Go-sm.mov)
+Screen Captures:
+
+![places-screenshot](/Users/chihiroshibayama/git/Places-You'll-Go/media/Places-Screenshot1.png)
+
+![places-ArcGIS](/Users/chihiroshibayama/git/Places-You'll-Go/media/Places-ArcGIS.png)
+
+
 
 ### References & Recourses
 
