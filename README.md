@@ -26,6 +26,8 @@ This is a work in progress application.
 - When cards are added or deleted, it will automatically reflect the changes
 - User can view all the places on a map
 
+![places-screencapture](/Users/chihiroshibayama/git/Places-You'll-Go/Places-You'll-Go-sm.mov)
+
 ### References & Recourses
 
 - ArcGIS related
