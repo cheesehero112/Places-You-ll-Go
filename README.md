@@ -29,9 +29,9 @@ This is a work in progress application.
 
 Screen Captures:
 
-![places-screenshot](/Users/chihiroshibayama/git/Places-You'll-Go/media/Places-Screenshot1.png)
+![places-screenshot](https://github.com/cheesehero112/Places-You-ll-Go/raw/main/media/Places-Screenshot1.png)
 
-![places-ArcGIS](/Users/chihiroshibayama/git/Places-You'll-Go/media/Places-ArcGIS.png)
+![places-ArcGIS](https://github.com/cheesehero112/Places-You-ll-Go/raw/main/media/Places-ArcGIS.png)
 
 
 
