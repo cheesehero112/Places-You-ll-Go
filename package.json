@@ -9,7 +9,8 @@
     "start:prod": "node server/server.js",
     "start:dev": "webpack-dev-server --mode development --hot",
     "build": "webpack --mode production",
-    "dev:all": "concurrently \"npm run start:dev\" \"npm start\""
+    "dev:all": "concurrently \"npm run start:dev\" \"npm start\"",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Chihiro Shibayama Snider",
