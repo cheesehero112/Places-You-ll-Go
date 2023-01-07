@@ -5,11 +5,13 @@ require('dotenv').config();
 
 // import routes
 const placesRoutes = require('./routes/places');
+const userRoutes = require('./routes/user');
 // global json check
 app.use(express.json());
 
 // route handlers
 app.use('/api/places', placesRoutes);
+app.use('/api/user', userRoutes);
 
 // connect to db
 mongoose

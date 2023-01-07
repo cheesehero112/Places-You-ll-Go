@@ -3,13 +3,10 @@ const Schema = mongoose.Schema;
 
 // use this when/if I add user login function
 const userSchema = new Schema({
-  firstName: {
+  email: {
     type: String,
     required: true,
-  },
-  lastName: {
-    type: String,
-    required: true,
+    unique: true,
   },
   password: {
     type: String,
@@ -17,4 +14,4 @@ const userSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.model('User', userSchema);
