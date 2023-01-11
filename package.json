@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "@arcgis/webpack-plugin": "^4.22.0",
+    "bcrypt": "^5.1.0",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
     "esri-loader": "^3.7.0",
