@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
 
-// use this when/if I add user login function
+// user data model
 const userSchema = new Schema({
   email: {
     type: String,
