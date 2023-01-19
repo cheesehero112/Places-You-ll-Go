@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+// Places data schema
 const placeSchema = new Schema(
   {
     city: {
