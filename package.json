@@ -13,7 +13,7 @@
     "test": "jest"
   },
   "keywords": [],
-  "author": "Chihiro Shibayama Snider",
+  "author": "Chihiro Snider",
   "license": "ISC",
   "dependencies": {
     "@arcgis/webpack-plugin": "^4.22.0",
